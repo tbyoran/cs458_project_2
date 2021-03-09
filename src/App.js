@@ -13,7 +13,7 @@ import theme from './theme';
 
 import { Constants } from './utils';
 
-const DEBUG = true;
+const DEBUG = false;
 
 const App = () => {
   const [name, setName] = useState(DEBUG && Constants.DEBUG.name || null);
