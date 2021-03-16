@@ -31,20 +31,44 @@ export default {
       "value": null,
     },
     {
-      "label": "Type 1",
+      "label": "Comirnaty (BNT162b2) / Pfizer-BioNTech",
       "value": "1",
     },
     {
-      "label": "Type 2",
+      "label": "Moderna (mRNA-1273)",
       "value": "2",
     },
     {
-      "label": "Type 3",
+      "label": "Janssen (JNJ-78436735; Ad26.COV2.S)",
       "value": "3",
     },
     {
-      "label": "Type 4",
+      "label": "AstraZeneca (AZD1222)",
       "value": "4",
+    },
+    {
+      "label": "CoronaVac / Sinovac",
+      "value": "5",
+    },
+    {
+      "label": "Sputnik V",
+      "value": "6",
+    },
+    {
+      "label": "BBIBP-CorV",
+      "value": "7",
+    },
+    {
+      "label": "EpiVacCorona",
+      "value": "8",
+    },
+    {
+      "label": "Convidicea (Ad5-nCoV)",
+      "value": "9",
+    },
+    {
+      "label": "Covaxin",
+      "value": "10",
     },
     {
       "label": "Other",
