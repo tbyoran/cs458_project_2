@@ -18,7 +18,7 @@
 
 ## Build
 ```bash
-  npm run build
+  npm run build:android
 ```
 After the build script is done the generated apk (`app-release.apk`) can be found in `./android/app/build/outputs/apk/release`.
 
