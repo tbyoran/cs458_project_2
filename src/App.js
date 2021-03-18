@@ -53,9 +53,11 @@ const App = () => {
             <View style={styles.sectionContainer}>
               <Input
                 iconName="user-alt"
+                key="name"
                 name="name"
                 onChangeText={(text) => setName(text)}
                 placeholder="Name"
+                testID="name"
                 type="text"
                 value={name}
               />
@@ -63,18 +65,23 @@ const App = () => {
             <View style={styles.sectionContainer}>
               <Input
                 iconName="canadian-maple-leaf"
+                key="surname"
                 name="surname"
                 onChangeText={(text) => setSurname(text)}
                 placeholder="Surname"
+                testID="surname"
                 type="text"
                 value={surname}
               />
             </View>
             <View style={styles.sectionContainer}>
               <Input
-                iconName="venus-mars"
                 data={Constants.Genders}
+                iconName="venus-mars"
+                key="gender"
+                name="gender"
                 onChange={(itemValue) => setGender(itemValue)}
+                testID="gender"
                 type="dropdown"
                 value={gender}
               />
@@ -83,27 +90,36 @@ const App = () => {
               <Input
                 defaultLabel={Constants.Birthday}
                 iconName="calendar"
+                key="birthday"
                 maximumDate={new Date()}
                 mode="date"
+                name="birthday"
                 onChange={(event, date) => setBirthday(date)}
+                testID="birthday"
                 type="date"
                 value={birthday}
               />
             </View>
             <View style={styles.sectionContainer}>
               <Input
-                iconName="city"
                 data={Constants.Cities}
+                iconName="city"
+                key="city"
+                name="city"
                 onChange={(itemValue) => setCity(itemValue)}
+                testID="city"
                 type="dropdown"
                 value={city}
               />
             </View>
             <View style={styles.sectionContainer}>
               <Input
-                iconName="syringe"
                 data={Constants.Vaccines}
+                iconName="syringe"
+                key="vaccineType"
+                name="vaccineType"
                 onChange={(itemValue) => setVaccineType(itemValue)}
+                testID="vaccineType"
                 type="dropdown"
                 value={vaccineType}
               />
@@ -112,9 +128,11 @@ const App = () => {
               (vaccineType == -1) && (
                 <View style={styles.sectionContainer}>
                   <Input
-                    name="vaccineType"
+                    key="otherVaccineType"
+                    name="otherVaccineType"
                     onChangeText={(text) => setOtherVaccineType(text)}
                     placeholder="Please type another vaccine type"
+                    testID="otherVaccineType"
                     type="text"
                     value={otherVaccineType}
                   />
@@ -124,9 +142,11 @@ const App = () => {
             <View style={styles.sectionContainer}>
               <Input
                 iconName="comment"
+                key="sideEffect"
                 name="sideEffect"
                 onChangeText={(text) => setSideEffect(text)}
                 placeholder="Any side affect (Optional)"
+                testID="sideEffect"
                 type="text"
                 value={sideEffect}
               />
