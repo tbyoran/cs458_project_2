@@ -8,34 +8,32 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import theme from '../../theme';
 
+import { testProps } from '../../utils';
+
 const Input = (props) => {
-  const { iconName, testID, type, style } = props;
+  const { iconName, name, type, style } = props;
 
-  function testProps(id) {
-    return { testID: id, accessibilityLabel: id };
-  }
-
-  const inputElement = (type, testID) => {
+  const inputElement = (type) => {
     switch (type) {
       case "date":
-        return (<DateInput {...props} {...testProps(testID)} defaultStyle={styles.input} />);
+        return (<DateInput {...props} {...testProps(name)} defaultStyle={styles.input} />);
       case "dropdown":
-        return (<DropdownInput {...props} {...testProps(testID)} defaultStyle={styles.input} />);
+        return (<DropdownInput {...props} {...testProps(name)} defaultStyle={styles.input} />);
       case "text":
-        return (<TextInput {...props} {...testProps(testID)} defaultStyle={styles.input} />);
+        return (<TextInput {...props} {...testProps(name)} key={name} defaultStyle={styles.input} />);
       default:
         return null;
     }
   }
 
   return (
-    <View style={[styles.wrapper, style]} >
+    <View style={[styles.wrapper, style]}>
       {iconName && (
         <View style={styles.iconWrapper}>
           <Icon color={theme.Colors.dark} name={iconName} size={16} />
         </View>
       )}
-      {inputElement(type, testID)}
+      {inputElement(type)}
     </View>
   );
 };
