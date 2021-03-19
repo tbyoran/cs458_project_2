@@ -12,8 +12,8 @@ const Input = (props) => {
       accessibilityLabel={accessibilityLabel}
       id={id}
       key={name}
-      testID={testID}
       name={name}
+      testID={testID}
       onValueChange={onChange}
       selectedValue={value}
       style={[defaultStyle, inputStyle]}

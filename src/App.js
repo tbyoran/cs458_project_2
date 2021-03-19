@@ -42,7 +42,7 @@ const App = () => {
 
   return (
     <>
-      <SafeAreaView {...testProps("root")}>
+      <SafeAreaView accessibilityLabel="root" testID="root">
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           contentContainerStyle={styles.scrollView}
@@ -138,7 +138,13 @@ const App = () => {
             </View>
           </View>
           <View style={styles.footer}>
-            <Button disabled={!_checkFormValidation()} onPress={() => _sendSurvey()} title="Send Survey" />
+            <Button
+              {...testProps("sendSurvey")}
+              name="sendSurvey"
+              disabled={!_checkFormValidation()}
+              onPress={() => _sendSurvey()}
+              title="Send Survey"
+            />
           </View>
         </ScrollView>
       </SafeAreaView>

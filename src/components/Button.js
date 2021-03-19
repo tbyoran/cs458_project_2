@@ -4,10 +4,15 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import theme from '../theme';
 
 const Button = (props) => {
-  const { disabled, onPress, style, title, titleStyle } = props;
+  const { accessibilityLabel, disabled, id, name, onPress, style, testID, title, titleStyle } = props;
 
   return (
     <TouchableOpacity
+      accessibilityLabel={accessibilityLabel}
+      id={id}
+      key={name}
+      name={name}
+      testID={testID}
       activeOpacity={0.7}
       disabled={disabled}
       onPress={onPress}

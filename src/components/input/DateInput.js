@@ -13,11 +13,11 @@ const Input = (props) => {
     <View style={[defaultStyle, inputStyle]}>
       {show ? (
         <DateTimePicker
-          accessibilityLabel={accessibilityLabel}
-          id={id}
-          key={name}
-          name={name}
-          testID={testID}
+          accessibilityLabel={accessibilityLabel + "_" + "picker"}
+          id={id + "_" + "picker"}
+          key={name + "_" + "picker"}
+          name={name + "_" + "picker"}
+          testID={testID + "_" + "picker"}
           display="default"
           is24Hour={true}
           maximumDate={maximumDate}
